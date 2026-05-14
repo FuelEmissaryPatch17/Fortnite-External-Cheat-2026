@@ -13,7 +13,7 @@ void reverse(char str[]) {
 int main() {
     char str[MAX_SIZE];
     printf("Enter a string: ");
-    fgets(str, MAX_SIZE, stdin);
+    fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = 0;
     reverse(str);
     printf("Reversed string: %s\n", str);
